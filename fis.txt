@@ -1,0 +1,8 @@
+mude o mecanismo de voo, mudando toda a fisica do drone, fazneod com que cada motor possa ter uma forca 
+correta, o drone pesa 2kg e a gravidade considere 9.8m/s²
+agora o drone nao voa mais nde orma reta, oque define a velocaide dele é a inclinacao dele, faca tambem decomposicao de vetores 
+apra ovimentos horisontais e verticais para o drone, e considere que a forca de cada motor pode ser controlada 
+individualmente para ajustar a inclinação do drone.
+o drone tambem ela nao para de uma vez ele continua com a inercia, ou seja, ele desacelera gradualmente conforme
+a inclinao dele, lembrese que o dorne é um quadricopitero em formato x, com quatro motores localizados nas extremidades
+o drone é perfeitamente balanceado e cada motor tem potencia igual
