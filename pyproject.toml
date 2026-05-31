@@ -1,0 +1,24 @@
+[project]
+name = "drone-simulator"
+version = "1.0.0"
+description = "Drone simulator using VPython and NumPy"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Felipe Zanoni da Rosa" }
+]
+license = { text = "Proprietary - All rights reserved" }
+keywords = ["drone", "simulation", "vpython", "physics"]
+
+dependencies = [
+    "vpython",
+    "numpy"
+]
+
+[project.urls]
+Homepage = "https://github.com/fezarosa-dev/droneSimulator"
+Repository = "https://github.com/fezarosa-dev/droneSimulator"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
