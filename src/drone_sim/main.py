@@ -393,7 +393,8 @@ class Simulation:
 
 
 # ============================================================
-
-if __name__ == "__main__":
+def run():
     sim = Simulation()
     sim.run()
+if __name__ == "__main__":
+    run()

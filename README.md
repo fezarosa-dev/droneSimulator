@@ -1,6 +1,6 @@
 # Drone Simulator
 
-Projeto de simulação de drone usando VPython e NumPy.
+Projeto de simulação de drone usando **VPython** e **NumPy**, desenvolvido no ambiente do **ROS 2**.
 
 ---
 
@@ -8,20 +8,19 @@ Projeto de simulação de drone usando VPython e NumPy.
 
 - Python 3.10+
 - pip
-- venv
 
 ---
 
 ## Instalação
 
-Clone o projeto:
+Clone o repositório:
 
 ```bash
-git clone <repo>
-cd drone_simulator
+git clone https://github.com/fezarosa-dev/droneSimulator
+cd droneSimulator
 ```
 
-Crie o ambiente e instale dependências:
+Execute o script de setup:
 
 ```bash
 chmod +x script/setup.sh
@@ -32,7 +31,7 @@ chmod +x script/setup.sh
 
 ## Atualização do projeto
 
-Sempre que alterar dependências ou o projeto:
+Sempre que `pyproject.toml` ou `requirements.txt` forem alterados:
 
 ```bash
 chmod +x script/update.sh
@@ -43,17 +42,16 @@ chmod +x script/update.sh
 
 ## Como rodar o simulador
 
-Após instalar:
+Após instalação, você pode executar de qualquer lugar:
 
 ```bash
-source venv/bin/activate
 drone-sim
 ```
 
-ou
+Ou diretamente pelo módulo:
 
 ```bash
-python -m drone_sim.main
+python3 -m drone_sim.main
 ```
 
 ---
@@ -61,7 +59,7 @@ python -m drone_sim.main
 ## Estrutura do projeto
 
 ```
-drone_simulator/
+droneSimulator/
 ├── pyproject.toml
 ├── requirements.txt
 ├── script/
@@ -77,7 +75,7 @@ drone_simulator/
 
 ## Entry point
 
-O projeto usa entry point definido no pyproject.toml:
+O comando `drone-sim` é definido via `pyproject.toml`:
 
 ```toml
 [project.scripts]
@@ -88,18 +86,16 @@ drone-sim = "drone_sim.main:run"
 
 ## Problemas comuns
 
-### comando não encontrado (drone-sim)
+### Comando não encontrado (drone-sim)
 
-Execute:
+Se o comando não for encontrado após o setup:
 
 ```bash
-pip install -e .
+export PATH="$HOME/.local/bin:$PATH"
 ```
 
-### ambiente errado
-
-Sempre ative o venv:
+Para solução permanente, adicione ao `.bashrc` ou `.zshrc`:
 
 ```bash
-source venv/bin/activate
+export PATH="$HOME/.local/bin:$PATH"
 ```

@@ -14,10 +14,4 @@ venv/
 # Logs
 *.log
 
-# IDEs
-.vscode/
-.idea/
-
-# OS files
-.DS_Store
-Thumbs.db
+*.egg-info/

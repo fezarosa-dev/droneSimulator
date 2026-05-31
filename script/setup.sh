@@ -7,28 +7,18 @@ PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 echo "Entrando no projeto: $PROJECT_ROOT"
 cd "$PROJECT_ROOT"
 
-# Criar venv apenas se não existir
-if [ ! -d "venv" ]; then
-    echo "Criando venv..."
-    python3 -m venv venv
+echo "Atualizando pip para o usuário..."
+python3 -m pip install --upgrade pip --user
+
+echo "Instalando dependências globais..."
+if [ -f "requirements.txt" ]; then
+    python3 -m pip install -r requirements.txt --user
 else
-    echo "venv já existe, pulando criação..."
+    echo "Aviso: requirements.txt não encontrado, pulando..."
 fi
 
-echo "Ativando venv..."
-source venv/bin/activate
-
-echo "Atualizando pip..."
-pip install --upgrade pip
-
-echo "Instalando dependências..."
-pip install -r requirements.txt
-
 echo "Instalando projeto em modo editável..."
-pip install -e .
-
-echo "Gerando freeze do ambiente..."
-pip freeze > requirements.lock.txt
+python3 -m pip install -e . --user
 
 echo ""
 echo "Setup concluído com sucesso."
@@ -36,7 +26,5 @@ echo ""
 echo "Para rodar o simulador use:"
 echo "  drone-sim"
 echo "ou:"
-echo "  python -m drone_sim.main"
+echo "  python3 -m drone_sim.main"
 echo ""
-echo "Para reativar o ambiente depois:"
-echo "  source venv/bin/activate"
