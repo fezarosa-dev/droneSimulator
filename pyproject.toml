@@ -18,6 +18,12 @@ dependencies = [
     "numpy"
 ]
 
+# Dependências exclusivas para desenvolvimento (linter, type checker, etc.)
+[project.optional-dependencies]
+dev = [
+    "basedpyright"
+]
+
 [project.urls]
 Homepage = "https://github.com/fezarosa-dev/droneSimulator"
 Repository = "https://github.com/fezarosa-dev/droneSimulator"
@@ -28,3 +34,8 @@ drone-sim = "drone_sim.main:run"
 [build-system]
 requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
+
+# Configuração opcional do Basedpyright para o seu projeto
+[tool.basedpyright]
+include = ["src"]
+typeCheckingMode = "standard" # Pode mudar para "strict" se quiser checagem ultra rígida

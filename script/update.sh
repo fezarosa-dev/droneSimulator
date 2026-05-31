@@ -17,8 +17,8 @@ else
     echo "Aviso: requirements.txt não encontrado, pulando..."
 fi
 
-echo "Reinstalando projeto em modo editável..."
-python3 -m pip install -e . --user
+echo "Reinstalando projeto e ferramentas de dev em modo editável..."
+python3 -m pip install -e ".[dev]" --user
 
 echo ""
 echo "Update concluído com sucesso."
