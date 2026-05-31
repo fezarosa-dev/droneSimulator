@@ -29,7 +29,7 @@ Homepage = "https://github.com/fezarosa-dev/droneSimulator"
 Repository = "https://github.com/fezarosa-dev/droneSimulator"
 
 [project.scripts]
-drone-sim = "drone_sim.main:run"
+drone-sim = "drone_sim.main:main"
 
 [build-system]
 requires = ["setuptools>=68", "wheel"]
