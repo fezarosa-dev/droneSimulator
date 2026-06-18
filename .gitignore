@@ -1,17 +1,5 @@
-# Python cache
 __pycache__/
-*.py[cod]
-*$py.class
-
-# Virtual environment
-venv/
-.env/
-.venv/
-
-# Environment variables
-.env
-
-# Logs
-*.log
-
-*.egg-info/
+*.pyc
+build/
+install/
+log/
