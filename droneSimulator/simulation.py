@@ -8,9 +8,9 @@ do drone, física e detecção de colisões.
 from typing import List
 import vpython as vp
 import numpy as np
-from drone_sim.drone import Drone
-from drone_sim.world import WorldGenerator, Obstacle
-from drone_sim.autopilot import Autopilot
+from .drone import Drone
+from .world import WorldGenerator, Obstacle
+from .autopilot import Autopilot
 
 
 class Simulation:
